@@ -2,7 +2,7 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Opel implements Car{
     private int brake;
-    private  int engine;
+    private int engine;
     private int intro;
 
     public Opel(int brake, int engine, int intro) {
@@ -11,13 +11,20 @@ public class Opel implements Car{
         this.intro = intro;
     }
 
+    public Opel(double a) { } // jest ona pusta
+
     public int getSpeed(){
         return engine;
     }
-    public int increaseSpeed(){
-        return getSpeed() + intro;
+
+    public void increaseSpeed(){
+        int newIncreaseSpeed = this.engine + intro;
+        this.engine = newIncreaseSpeed + intro;
+        System.out.println(this.engine);
     }
-    public int decreaseSpeed() {
-        return getSpeed() - brake;
+    public void decreaseSpeed() {
+        int newDecreaseSpeed = this.engine - brake;
+        this.engine = newDecreaseSpeed - brake;
+        System.out.println(this.engine);
     }
 }
