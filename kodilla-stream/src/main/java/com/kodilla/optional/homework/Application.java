@@ -1,7 +1,5 @@
 package com.kodilla.optional.homework;
 
-import com.kodilla.stream.UsersRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
