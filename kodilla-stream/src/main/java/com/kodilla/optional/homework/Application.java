@@ -15,20 +15,17 @@ public class Application {
 
     public static List<Student> getStudentsList() {
         List<Student> students = new ArrayList<>();
-        students.add(new Student("Adaś", "Pani Klara"));
-        students.add(new Student("Tomek", "Pani Zofia"));
-        students.add(new Student("Ala", "<undefined>"));
-        students.add(new Student("Krzyś", "Pani Klara"));
+        students.add(new Student("Adaś", new Teacher ("Pani Klara")));
+        students.add(new Student("Tomek", new Teacher ("Pani Zofia")));
+        students.add(new Student("Ala", null));
+        students.add(new Student("Krzyś", new Teacher ("Pani Klara")));
 
-
-        Student student = null;
-
-        Optional<Student> optionalStudent = Optional.ofNullable(student);
-
-        String studentname =
-                optionalStudent.orElse(new Student("", "")).getName();
-
-        System.out.println(studentname);
+        for(Student s: students){
+            Optional<Teacher> optionalTeacher = Optional.ofNullable(s.getTeacher());
+            String teachername =
+                    optionalTeacher.orElse(new Teacher("<undified>")).getName();
+            System.out.println(teachername);
+        }
         return students;
     }
 }

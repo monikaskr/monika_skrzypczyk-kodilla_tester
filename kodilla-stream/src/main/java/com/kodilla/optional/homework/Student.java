@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Student {
     private String name;
-    private String teacher;
+    private Teacher teacher;
 
-    public Student(String name, String teacher) {
+    public Student(String name, Teacher teacher) {
         this.name = name;
         this.teacher = teacher;
     }
@@ -14,7 +14,7 @@ public class Student {
     public String getName() {
         return name;
     }
-    public String getTeacher() {
+    public Teacher getTeacher() {
         return teacher;
     }
 
@@ -31,11 +31,4 @@ public class Student {
         return Objects.hash(name, teacher);
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", teacher='" + teacher + '\'' +
-                '}';
-    }
 }
