@@ -40,18 +40,18 @@ public class Bank {
         }
         return counter;
     }
-    public int getAllAvgPutOut() {
+    public double getAllAvgPutOut() {
         int sum = 0;
-        int avg = 0;
+        double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (values[i].getTransactionPutOut() < 0);
             return sum = values[i].getTransactionPutOut();
         }
         return avg=sum/getAllTransactionPutOut();
     }
-    public int getAllAvgPutIn() {
+    public double getAllAvgPutIn() {
         int sum = 0;
-        int avg = 0;
+        double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (values[i].getTransactionPutIn() < 0);
             return sum = values[i].getTransactionPutIn();

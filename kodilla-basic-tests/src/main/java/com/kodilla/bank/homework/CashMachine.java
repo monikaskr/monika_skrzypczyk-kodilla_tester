@@ -47,18 +47,18 @@ public class CashMachine {
         }
         return counter;
     }
-    public int getAvgPutOut() {
+    public double getAvgPutOut() {
         int sum = 0;
-        int avg = 0;
+        double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (this.values[i] < 0);
             return sum = this.values[i];
         }
         return avg=sum/getTransactionPutOut();
     }
-    public int getAvgPutIn() {
+    public double getAvgPutIn() {
         int sum = 0;
-        int avg = 0;
+        double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (this.values[i] > 0);
             return sum = this.values[i];
