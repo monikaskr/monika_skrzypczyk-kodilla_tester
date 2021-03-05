@@ -29,7 +29,7 @@ public class UserValidatorTestSuite {
         assertTrue(manipulator.validateEmail(text));
     }
     @ParameterizedTest
-    @ValueSource(strings = {"*1bAZArek3@gmail.com"})
+    @ValueSource(strings = {"*1bAZ.Arek3@gmail.com"})
     public void shouldReturnTrueIfEmailIsNotCorrectly(String text) {
         assertFalse(manipulator.validateEmail(text));
     }
