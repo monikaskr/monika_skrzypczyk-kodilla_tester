@@ -8,10 +8,11 @@ class WarehouseAppTest {
     public void testIsOrderInUse() throws OrderDoesntExistException {
         // given
         Warehouse warehouse = new Warehouse();
+        warehouse.addOrder( "209855");
         // when
-        //Order isOrderInUse = warehouse.getOrder("209855");
+        Order isOrderInUse = warehouse.getOrder("209855");
         // then
-        assertThrows(OrderDoesntExistException.class,()->warehouse.getOrder("209855"));
+        assertNotNull(isOrderInUse);
     }
 
     @Test
