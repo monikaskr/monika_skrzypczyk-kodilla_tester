@@ -14,7 +14,6 @@ public class Order {
         this.data = data;
         this.login = login;
     }
-
     public int getWartoscZamowienia(){
         return wartoscZamowienia;
     }

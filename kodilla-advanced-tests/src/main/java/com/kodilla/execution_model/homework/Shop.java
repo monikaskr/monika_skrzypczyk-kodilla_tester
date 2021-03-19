@@ -26,7 +26,7 @@ public class Shop {
         List<Order> zamowienie = new ArrayList<>();
         for(int i = 0 ; i < items.size() ;i++ ){
             Order order = items.get(i);
-            if(order.getWartoscZamowienia() < min && order.getWartoscZamowienia() > max){
+            if(order.getWartoscZamowienia() > min && order.getWartoscZamowienia() < max){
                 zamowienie.add(order);
             }
         }

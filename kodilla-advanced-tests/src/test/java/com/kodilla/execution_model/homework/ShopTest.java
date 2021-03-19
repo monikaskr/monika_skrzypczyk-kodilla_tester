@@ -33,12 +33,12 @@ public class ShopTest {
         assertEquals(2, result.size());
     }
 
-    @ParameterizedTest
+    @Test
     public void shouldGetCorrectItemAboveMinMax() {
         //When
         List<Order> result = shop.getMinMaxPrice(150,300);
         //Then
-        assertEquals(2, result.size());
+        assertEquals(1, result.size());
     }
     @Test
     public void checkItemsInShop() {
