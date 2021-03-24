@@ -2,12 +2,11 @@ package com.kodilla.spring.basic.dependency_injection.homework;
 
 public class ShippingCenter {
     private NotificationService notificationService;
+    private DeliveryService deliveryService;
 
     public ShippingCenter(NotificationService notificationService) {
         this.notificationService = notificationService;
     }
-
-    private DeliveryService deliveryService = new DeliveryService();
 
     public void sendPackage(String address, double weight) {
         if (deliveryService.deliverPackage(address, weight)) {
