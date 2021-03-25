@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootTest
 class ClockTestSuite {
     @Test
-    public void shouldCreateDifferentClock() {
+    public void shouldCreateDifferentClockAndCheck() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Clock firstBean = context.getBean(Clock.class);
         Clock secondBean = context.getBean(Clock.class);
