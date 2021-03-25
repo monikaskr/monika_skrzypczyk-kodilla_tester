@@ -8,7 +8,7 @@ import java.time.LocalTime;
 @Scope("prototype")
 public class Clock {
 
-    public LocalTime Clock() {
+    public LocalTime Clockm() {
         LocalTime time = LocalTime.now();
         return time;
     }
