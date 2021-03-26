@@ -1,8 +1,7 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
-public class DeliveryService implements NotificationService{
+public class DeliveryService{
 
-    @Override
     public boolean deliverPackage(String address, double weight) {
         if (weight > 30) {
             System.out.println("Package too heavy");

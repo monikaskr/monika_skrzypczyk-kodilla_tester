@@ -4,22 +4,16 @@ public class ShippingCenter {
     private NotificationService notificationService;
     private DeliveryService deliveryService;
 
-    public ShippingCenter(NotificationService notificationService) {
+    public ShippingCenter(NotificationService notificationService, DeliveryService deliveryService) {
         this.notificationService = notificationService;
+        this.deliveryService = deliveryService;
     }
 
     public void sendPackage(String address, double weight) {
         if (deliveryService.deliverPackage(address, weight)) {
-            success(address);
+            notificationService.success(address);
         } else {
-            fail(address);
+            notificationService.fail(address);
         }
-    }
-    public void success(String address) {
-        System.out.println("Package delivered to: " + address);
-    }
-
-    public void fail(String address) {
-        System.out.println("Package not delivered to: " + address);
     }
 }
