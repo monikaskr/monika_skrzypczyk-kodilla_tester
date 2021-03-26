@@ -1,27 +1,21 @@
 package com.kodilla.spring.basic.spring_dependency_injection.homework;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import javax.annotation.Resource;
 
 @Component
-@Primary
-public class ShippingCenter implements NotificationService{
+public class ShippingCenter {
 
-    @Resource(name = "deliveryService")
+    private NotificationService notificationService;
     private DeliveryService deliveryService;
+    public ShippingCenter (NotificationService notificationService, DeliveryService deliveryService){
+        this.notificationService = notificationService;
+        this.deliveryService = deliveryService;
+    }
 
     public String sendPackage(String address, double weight) {
         if (deliveryService.deliverPackage(address, weight)) {
-            return success(address);
+            return notificationService.success(address);
         }
-        return fail(address);
-    }
-    public String success(String address) {
-        return "Package delivered to: " + address;
-    }
-
-    public String fail(String address) {
-        return "Package not delivered to: " + address;
+        return notificationService.fail(address);
     }
 }
