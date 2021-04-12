@@ -1,4 +1,4 @@
-package controller;
+package com.kodilla.rest.controller;
 
 import com.kodilla.rest.domain.BookDto;
 import org.springframework.web.bind.annotation.GetMapping;
