@@ -17,9 +17,12 @@ public class EBayTestingAppXPath {
 
         WebElement categoryCombo = driver.findElement(
                 By.xpath("//*[@id=\"gh-cat\"]"));
-
         Select yearSelect = new Select(categoryCombo);
         yearSelect = new Select(categoryCombo);
         yearSelect.selectByIndex(3);
+
+        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"gh-ac\"]"));
+        inputField.sendKeys("trousers");
+        inputField.submit();
     }
 }
