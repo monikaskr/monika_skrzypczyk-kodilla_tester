@@ -17,6 +17,7 @@ public class EBayTestingAppCSS {
         driver.findElement(By.xpath("//*[@id=\"gdpr-banner-accept\"]")).click();
 
         WebElement searchInput = driver.findElement(By.className("gh-tb"));
-        searchInput.sendKeys("trousers");
+        searchInput.sendKeys("sony");
+        searchInput.submit();
     }
 }
