@@ -11,9 +11,10 @@ public class WarehouseApp {
         warehouse.addOrder("255545");
         warehouse.addOrder("209855");
 
+
         Order numberOfRounds = null;
         try {
-            numberOfRounds = warehouse.getOrder("209800");
+            numberOfRounds = warehouse.getOrder("209855");
         } catch (OrderDoesntExistException e) {
             e.printStackTrace();
         }

@@ -27,6 +27,6 @@ public class CalculatorTestSuite {
         int a = -4;
         int b = 8;
         int kwadratResult = calculator.kwadrat(a, b);
-        assertEquals(13, kwadratResult);
+        assertEquals(16, kwadratResult);
     }
 }

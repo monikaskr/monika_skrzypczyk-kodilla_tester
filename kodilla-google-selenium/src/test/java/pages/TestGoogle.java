@@ -1,25 +1,28 @@
 package pages;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestGoogle {
     WebDriver driver;
 
-    @Before
-    public void testSetup() {
+    @BeforeEach
+    public void testSetup() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "H:\\Kodilla\\kodilla-google-selenium\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.navigate().to("http://wwww.google.com");
+        driver.navigate().to("http://www.google.com");
+
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//*[@id=\"zV9nZe\"]/div")).click();
     }
 
-    @After
-    public void tearDown() {
-        driver.close();
-    }
+    //@AfterEach
+    //public void tearDown() {
+    //    driver.close();
+    //}
 
     @Test
     public void testGooglePage() {

@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cucumber-java-skeleton" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/monika_skrzypczyk-kodilla_tester" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ta-example-soap" vcs="Git" />
   </component>
 </project>

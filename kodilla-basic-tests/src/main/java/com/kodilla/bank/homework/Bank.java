@@ -41,7 +41,7 @@ public class Bank {
         return counter;
     }
     public double getAllAvgPutOut() {
-        int sum = 0;
+        double sum = 0;
         double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (values[i].getTransactionPutOut() < 0);
@@ -50,7 +50,7 @@ public class Bank {
         return avg=sum/getAllTransactionPutOut();
     }
     public double getAllAvgPutIn() {
-        int sum = 0;
+        double sum = 0;
         double avg = 0;
         for (int i = 0; i < this.values.length; i++) {
             if (values[i].getTransactionPutIn() < 0);
